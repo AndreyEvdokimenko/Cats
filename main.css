@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+ html, body{
+    height: 100vh;
+} 
+body{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    background:  #c6ffdd;
+    background: linear-gradient(39deg, rgba(167, 37, 66, 0.9948354341736695) 0%, rgba(206, 66, 112, 1) 25%, rgba(255, 135, 50, 1) 49%, rgba(245, 179, 42, 1) 75%, rgb(237, 241, 25) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 10s;
+    animation-name: gradient-animation;
+    animation-iteration-count: infinite;
+    background-size: 100%;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 100% 0%;
+        background-size: 400%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+        background-size: 300%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+        background-size: 300%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+        background-size: 400%;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Блок картинок */
+/* .images {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+} */
+
+/* Каждая картинка */
+.top_image {
+    object-fit: scale-down;
+    /* margin-bottom: 100px; */
+    /* margin: 5px 5px; */
+    transition: .2s;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.39));
+    max-width: 100%;
+   width: 500px;
+}
+
+/* Карточка с тестом */
+.quiz {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+     width: 100%;
+    max-width: 500px;
+    box-shadow: 3px 3px 8px 0px rgb(0 0 0 / 22%);
+    background-color: rgb(241 61 255 / 7%);
+    border-radius: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    transition: 0.2s;
+    color: white;
+}
+
+.quiz_title {
+    text-align: center;
+}
+
+/* Вопрос */
+.title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 15px;
+}
+.end{
+    width: 100px;
+    height: 100px;
+}
+
+.gif{
+    width: 500px;
+    max-width: 100%;
+}
+.sticker {
+    z-index: 1;
+    width: 140px;
+    position: absolute;
+    right: -26px;
+    bottom: -60px;
+    rotate: 5deg;
+    cursor: pointer;
+    transition: .2s;
+    filter: drop-shadow(3px 2px 4px #00000058);
+}
+
+.sticker:hover,
+.sticker:active {
+    width: 170px;
+    rotate: -3deg;
+    bottom: -40px;
+    right: -10px;
+    -webkit-filter: none;
+    filter: none;
+    filter: drop-shadow(3px 2px 4px #0000001d);
+}
+
+/* Кнопка */
+#submit {
+    position: absolute;
+    /* left: 0; */
+    right: -18px;
+    bottom: 0;
+    width: 120%;
+    height: 60px;
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgb(1 1 1 / 15%);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    transition: .1s;
+}
+
+/* Наведение на кнопку */
+#submit:hover {
+    background-color: rgb(1 1 1 / 22%);
+}
+
+/* Нажатие на кнопку */
+#submit:active {
+    background-color: rgba(1 1 1 / 30%);
+}
+
+/* Блок вопросов ul */
+.questions {
+    list-style-type: none;
+    user-select: none;
+    width: 100%;
+}
+
+/* Варианты ответов */
+li {
+    margin: 0px 0 0 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.07s;
+}
+
+/* Наведение на вариант ответа */
+li:hover {
+    background-color: rgb(1 1 1 / 15%);
+}
+
+/* Текст варианта ответа */
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+
+.answer {
+    margin-right: 15px;
+}
+
+/* Информация внизу страницы */
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media (max-width: 10px) {
+    body {
+        font-size: 14px;
+        size: 100%;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .top_image {
+        height: 15vh;
+    }
+
+    .quiz {
+        padding: 10px 10px;
+        padding-bottom: 70px;
+    }
+
+    label {
+        padding: 8px 5px;
+    }
+    
+    footer {
+        font-size: 70%;
+    }
+
+}

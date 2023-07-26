@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Из какого фильма этот котик?</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <div class="images"></div>
+    
+        <div class="quiz">
+            <div class="quiz_title">
+                 <img src="images/sticker.png" alt="Стиекр" onclick="checkAnswer()" class="sticker">
+                <h2 class="title">Тест: Из какого фильма этот котик?</h2>
+                <h5>Проверь, знаешь ли ты известные фильмы, в которых есть сцены с котиками</h5>
+            </div>
+
+            <ul class="questions">
+            </ul>
+
+            <button onclick="checkAnswer()" class="submit_button" id="submit">Начать тест</button>
+
+        </div>
+        </div>
+
+        <!-- <footer>
+            <p id="contacts">Contact me on Telegram: @DjB0w</p>
+        </footer> -->
+
+        <script src="main.js"></script>
+    </body>
+</html>
